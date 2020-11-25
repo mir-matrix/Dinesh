@@ -1,0 +1,118 @@
+ID
+
+1) id - with tag name       
+
+syntax: .//tagname[@attribute='attribute-value']
+
+
+
+2) id - without tag name
+syntax: .//*[@attribute='attribute-value']
+
+
+NAME:
+
+1) name - with tag name       
+
+syntax: .//tagname[@attribute='attribute-value']
+
+
+
+2) name - without tag name
+syntax: .//*[@attribute='attribute-value']
+
+
+
+Title 
+
+1) Title - with tag name       
+
+syntax: .//tagname[@attribute='attribute-value']
+
+
+
+2) Title - without tag name
+syntax: .//*[@attribute='attribute-value']
+
+
+
+Text
+
+<input id="sb_form_q" class="sb_form_q" name="q" type="search">
+
+<span>  Languages:  </span>
+
+.//tagname[text()='text-content']  - exact Matching
+
+
+contains Text
+
+
+.//tagname[contains(text(),'text-content')]
+
+
+starts-with
+
+.//tagname[starts-with(text(),'text-content')]
+
+.//tagname[starts-with(@attribute,'attribute-value')] - id, name
+
+ends-with
+
+.//tagname[ends-with(text(),'text-content')]
+
+.//tagname[ends-with(@attribute,'attribute-value')] - id, name
+
+
+following
+
+
+.//tagname[text()='text-content']//following::tagname
+
+
+preceding
+
+
+.//tagname[text()='text-content']//preceding::tagname
+
+
+
+AND - BOTH
+
+
+.//tagname[@attribute='attribute-value' and @attribute='attribute-value' ]
+
+OR  - Either one
+
+.//tagname[@attribute='attribute-value' or @attribute='attribute-value']
+
+
+Chained Locators - Protactors
+
+.//tagname[@attribute='attribute-value']//@attribute='attribute-value']
+
+
+Css Selector
+
+tagname[attribute='attribute-value']
+
+contains - *  - tagname[attribute*='attribute-value']
+starts-with ^ - tagname[attribute^='attribute-value']
+ends-with - $ - tagname[attribute$='attribute-value']
+
+AND
+
+tagname[attribute='attribute-value'][attribute='attribute-value']
+
+OR
+tagname[attribute='attribute-value'],[attribute='attribute-value']
+
+ancestor - find the parent
+
+.//tagname[@attribute='attribute-value']//ancestor::tagname
+
+
+
+https://github.com/mir-matrix/Dinesh.git - HTPP URL
+
+
